@@ -1,0 +1,43 @@
+#set($name = "Madara Uchiha")
+#set($greeting = "Hello, $name!")
+#set($sentence = "I love to play football.")
+#set($whitespaceString = "   Leading and trailing whitespace   ")
+
+  ## String Concatenation
+#set($fullGreeting = $greeting + " Nothing ever goes as planned in this world.")
+
+    ## String Length
+#set($lengthOfSentence = $sentence.length())
+
+   ## Substrings
+#set($substringExample = $sentence.substring(2, 6))  ## flove
+
+  ## Case Conversion
+#set($upperCaseName = $name.toUpperCase())
+#set($lowerCaseName = $name.toLowerCase())
+
+    ## Trimming Whitespace
+#set($trimmedString = $whitespaceString.trim())  ## Leading and trailing whitespace
+
+   ## Replacing Substrings
+#set($replacedString = $sentence.replace("football", "badminton"))
+
+   ## Splitting Strings
+#set($words = $sentence.split(" "))  ## Array of words
+
+<p>Original Greeting: $greeting</p>
+<p>Full Greeting: $fullGreeting</p>
+<p>Length of Sentence: $lengthOfSentence</p>
+<p>Substring Example: $substringExample</p>
+<p>Uppercase Name: $upperCaseName</p>
+<p>Lowercase Name: $lowerCaseName</p>
+<p>Trimmed String: $trimmedString</p>
+<p>Replaced String: $replacedString</p>
+<p>Words in Sentence:</p>
+
+<ul>
+    #foreach ($word in $words)
+        <li>$word</li>
+    #end
+</ul>
+
